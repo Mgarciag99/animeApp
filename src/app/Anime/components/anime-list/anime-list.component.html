@@ -1,0 +1,4 @@
+<div class="card" *ngFor="let item of anime; index as i">
+    <img src="{{anime[i].images.webp.large_image_url}}" class="image-card" alt="" srcset="">
+    <a  [routerLink]="['/anime', anime[i].mal_id]" title="Visualizar" style="background-color: black;"class="">{{anime[i].title}}</a>
+</div>

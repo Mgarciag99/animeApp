@@ -1,0 +1,4 @@
+<ul class="li-panel" >
+    <li *ngFor="let item of categories; index as i"><i class="fa fa-solid fa-caret-right"></i><span><a [routerLink]="['/genre', categories[i].mal_id]">  {{ categories[i].name }}</a></span></li>
+</ul>
+

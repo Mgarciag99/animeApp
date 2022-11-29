@@ -1,0 +1,42 @@
+<div class="space"></div>
+
+<div class="container" id="list-anime">
+    <div class="aside">
+        <img src="{{anime.images.jpg.large_image_url}}" alt="" height="400px" width="100%">
+        <div class="aside-item">
+            <h2>Information</h2>
+            <div class="item-list">Type: {{anime.type}}</div>
+            <div class="item-list">Episodes: {{anime.episodes}}</div>
+            <div class="item-list">Status: {{anime.status}}</div>
+            <div class="item-list">Aired: {{anime.aired.prop.from.day}}/{{anime.aired.prop.from.month}}/{{anime.aired.prop.from.year}}</div>
+            <div class="item-list">Studios: {{anime.studios[0].name}}</div>
+            <div class="item-list">Sources: {{anime.source}}</div>
+            <div class="item-list">Genres: {{anime.genres[0].name}}</div>
+            <div class="item-list">Theme: {{anime.themes}}</div>
+        </div>
+        <div class="aside-item">
+            <h2>Stadistics</h2>
+            <div class="item-list">Score: {{anime.score}}</div>
+            <div class="item-list">Ranked: {{anime.rank}}</div>
+            <div class="item-list">Papularity: {{anime.popularity}}</div>
+            <div class="item-list">Members: {{anime.members}}</div>
+            <div class="item-list">Favorites: {{anime.favorites}}</div>
+        </div>
+    </div>
+    <div class="main">
+        <div class="main-rectangle">
+            <div>
+                <h2>Score</h2>
+            </div>
+            <div>Raked</div>
+        </div>
+        <div class="main-item">
+            <h2>Synopsis</h2>
+            <p>{{anime.synopsis}}</p>
+        </div>
+        <div class="main-item">
+            <h2>background</h2>
+            <p>{{anime.background}}</p>
+        </div>
+    </div>
+</div>

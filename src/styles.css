@@ -1,1 +1,552 @@
 /* You can add global styles to this file, and also import other style files */
+/*fuentes*/
+
+@font-face {
+    font-family: 'Poppins-Medium';
+    src: url('app/shared/assets/fonts/Rubik/Rubik-VariableFont_wght.ttf');
+}
+@font-face {
+    font-family: 'Poppins-Bold';
+    src: url('app/shared/assets/fonts/Poppins/Poppins-Bold.ttf');
+}
+@font-face {
+    font-family: 'Poppins-SemiBold';
+    src: url('app/shared/assets/fonts/Poppins/Poppins-SemiBold.ttf');
+}
+
+@font-face {
+    font-family: 'Rubik', sans-serif;
+    src: url('app/shared/assets/fonts/Rubik/Rubik-VariableFont_wght.ttf');
+}
+
+/*styles default*/
+*{
+    font-family: 'Poppins-Medium';
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    font-size: 16px;
+}
+.content-general{
+    width: 70%;
+    margin: auto;
+}
+.title{
+    color: #fff;
+    padding: 1em 0em;
+    font-size: 2em;
+}
+nav{
+    background-color: #610094;
+    padding: 1em 0em;
+    color: #fff;
+    font-size: 1.2em;
+}
+.container-nav{
+    width: 70%;
+    margin: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+}
+.container-nav ul li a{
+    text-decoration: none;
+    color: #fff;
+}
+.container-nav ul li{
+    display: inline-block;
+    padding: 0.7em;
+    -webkit-transition: 500ms all;
+    -o-transition: 500ms all;
+    transition: 500ms all;
+}
+
+
+.btn-hamburguer, .search{
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    -webkit-transition: 500ms all;
+    -o-transition: 500ms all;
+    transition: 500ms all;
+    padding: 0.7em;
+    font-size: 1.2em;
+}
+.container-nav ul li:hover{
+    -webkit-transform: scale(1.1);
+        -ms-transform: scale(1.1);
+            transform: scale(1.1);
+    background-color: #BC8CF2;
+}
+
+header{
+    background-color: #3F0071;
+    height: 600px;
+    padding: 2em;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+}
+
+/*-----------------------------------------------------------
+-------------------------------------------------------------
+------------------------ CARROUSEL --------------------------
+-------------------------------------------------------------
+-------------------------------------------------------------*/
+.carrousel{
+    display: -ms-grid;
+    display: grid;
+    height: 28em;
+    background-color: #fff;
+    box-shadow: 3px 1px 16px 0px rgba(0,0,0,0.6);
+    -webkit-box-shadow: 3px 1px 16px 0px rgba(0,0,0,0.6);
+    -moz-box-shadow: 3px 1px 16px 0px rgba(0,0,0,0.6);
+    overflow: hidden;
+
+}
+.carrousel-images{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 400%;
+    margin-left: -100%;
+    position: sticky;
+}
+.carrousel-images .img{
+    width: 100%;
+    height: 28em;
+    -webkit-transition: 500ms all;
+    -o-transition: 500ms all;
+    transition: 500ms all;
+    position: relative;
+
+}
+.carrousel-images img{
+    width: 100%;
+    height: 28em;
+    -webkit-transition: 500ms all;
+    -o-transition: 500ms all;
+    transition: 500ms all;
+}
+.title-image{
+    background-color: rgba(0,0,0);
+    color: rgb(255, 255, 255);
+    padding: 1em;
+    font-family: 'Poppins-Bold';
+    font-size: 1.5em;
+    text-decoration: none;
+    border-bottom: 0.3em solid rgb(9, 188, 255);
+    -webkit-transition: 500ms all;
+    -o-transition: 500ms all;
+    transition: 500ms all;
+    position: absolute;
+    width: 50%;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+    margin: 0.7em 0.7em;
+}   
+.carrousel-arrows{
+    width: 75%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+}
+.carrousel-arrows button i{
+    font-size: 4em;
+    color: #BC8CF2;
+    text-shadow: 2px 2px 0p #000;
+}
+.carrousel-arrows button{
+    margin: 1em;
+    border:none;
+    background-color: transparent;
+    -webkit-transition: 200ms all;
+    -o-transition: 200ms all;
+    transition: 200ms all;
+}
+.carrousel-arrows button:hover{
+    -webkit-transform: scale(1.2,1.2);
+        -ms-transform: scale(1.2,1.2);
+            transform: scale(1.2,1.2);
+    color:#ccc;
+}
+.content-carrousel{
+    width: 65%;
+    margin: auto;
+    position: relative;
+}
+.carrousel-arrows{
+    position: absolute;
+}
+.carrousel-arrows h2{
+    padding: 1em 0em;
+    color: #fff;
+    text-shadow: 2px 2px 0p #000;
+}
+
+/*-----------------------------------------------------------
+-------------------------------------------------------------
+------------------------ END CARROUSEL --------------------------
+-------------------------------------------------------------
+-------------------------------------------------------------*/
+
+/*-----------------------------------------------------------
+-------------------------------------------------------------
+------------------------ MAIN CARDS --------------------------
+-------------------------------------------------------------
+-------------------------------------------------------------*/
+
+
+#main-one{
+    height: 600px;
+    background-color: #150050;
+    position: relative;
+}
+.main-one-content{
+    height: 400px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+}
+
+.card-item{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+}
+.card img{
+    width: 100%;
+    height: 400px;
+}
+.title-card-item{
+    font-family: 'Poppins-Bold';
+    color: #EEE;
+    text-align: center;
+    font-size: 1.5em;
+    border-bottom: 0.2em solid #AA14F0;
+}
+.carrousel-cards{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 300%;
+    margin-left: -100%;
+
+}
+.carrousel-cards .card-item{
+    width: 100%;
+    height: 28em;
+    -webkit-transition: 500ms all;
+    -o-transition: 500ms all;
+    transition: 500ms all;
+}
+.content-carrousel-cards{
+    width: 70%;
+    margin: auto;
+    overflow: hidden;
+}
+
+
+.carrousel-arrows-cards{
+    width: 80%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+}
+.carrousel-arrows-cards button i{
+    font-size: 4em;
+    color: #fff;
+    text-shadow: 2px 2px 0p #000;
+}
+.carrousel-arrows-cards button{
+    margin: 1em;
+    border:none;
+    background-color: transparent;
+    -webkit-transition: 200ms all;
+    -o-transition: 200ms all;
+    transition: 200ms all;
+}
+.carrousel-arrows-cards button:hover{
+    -webkit-transform: scale(1.2,1.2);
+        -ms-transform: scale(1.2,1.2);
+            transform: scale(1.2,1.2);
+    color:#ccc;
+}
+.carrousel-arrows-cards{
+    position: absolute;
+}
+.carrousel-arrows-cards h2{
+    padding: 1em 0em;
+    color: #fff;
+    text-shadow: 2px 2px 0p #000;
+}
+/*-----------------------------------------------------------
+-------------------------------------------------------------
+------------------------ MAIN CARDS --------------------------
+-------------------------------------------------------------
+-------------------------------------------------------------*/
+
+/*-----------------------------------------------------------
+-------------------------------------------------------------
+------------------------ MAIN CARDS --------------------------
+-------------------------------------------------------------
+-------------------------------------------------------------*/
+#main-two{
+    background-color: #000;
+    height: 1100;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+
+}
+.card-large{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    height: 400px;
+    position: relative;
+    margin-bottom: 3em;
+}
+.card-large .image-card-large img{
+    width: 100%;
+    height: 400px;
+    padding: 1em;
+}
+
+.image-card-large{
+    -webkit-box-flex: 40%;
+        -ms-flex: 40%;
+            flex: 40%;
+    z-index: 1;
+}
+.content-card-large{
+    background-color: #610094;
+    padding: 2em;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+.content-card, .btn-card-large{
+    width: 60%;
+}
+.content-card{
+    color: #EEE;
+}
+.content-card h2,
+.content-card h3,
+.content-card p{
+    margin-bottom: 0.5em;
+}
+
+.content-card h2{
+    font-family: 'Poppins-Bold';
+    font-size: 1.4em;
+}
+
+.content-card h3{
+    color: #BC8CF2;
+}
+.content-card h3 span{
+    color: #989898;
+}
+.btn-card-large{
+    margin-top: 2em;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+}
+.btn-card-large :first-child{
+    font-weight: 900;
+    background: #000;
+    color: #610094;
+    padding: 0.5em;
+}
+.btn-card-large :nth-child(2n){
+    background: #610094;
+    font-weight: 900;
+    color: #000;
+    padding: 0.5em;
+    border: 2px solid #000;
+}
+
+
+/*-----------------------------------------------------------
+-------------------------------------------------------------
+------------------------ MAIN CARDS --------------------------
+-------------------------------------------------------------
+-------------------------------------------------------------*/
+
+/*-----------------------------------------------------------
+-------------------------------------------------------------
+------------------------ FOOTER    --------------------------
+-------------------------------------------------------------
+-------------------------------------------------------------*/
+
+footer .footer-one, footer .footer-three{
+    height: 5em;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+            flex-direction: column;
+    background-color: #BC8CF2;
+}
+footer .footer-three p:nth-child(2n){
+    font-size: 0.8em;
+}
+footer .footer-one a, footer .footer-three a{
+    text-decoration: none;
+    color: #610094;
+}
+footer .footer-two{
+    height: 20em;
+    background-color: #610094;
+}
+
+footer .footer-three{
+    color: #939393;
+    background-color: #D9D9D9;
+}
+
+
+/*-----------------------------------------------------------
+-------------------------------------------------------------
+------------------------ END FOOTER--------------------------
+-------------------------------------------------------------
+-------------------------------------------------------------*/
+
+/*-----------------------------------------------------------
+-------------------------------------------------------------
+------------------------ PANEL ------------------------------
+-------------------------------------------------------------
+-------------------------------------------------------------*/
+
+#panel{   
+    background: #fff;
+    width: 25%;
+    height: 100%;
+    position: fixed;
+    z-index: 1000;
+    margin-left: 75%;
+    -webkit-box-shadow: -2px 0px 19px 0px rgba(148, 148, 148, 1);
+    -moz-box-shadow: -2px 0px 19px 0px rgba(148, 148, 148, 1);
+     box-shadow: -2px 0px 19px 0px rgba(148, 148, 148, 1);
+    overflow-y: auto;
+    display: none;
+   
+}
+
+@keyframes view-left {
+    from {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+
+    to {
+      transform: translateX(0%);
+      opacity: 1;
+    }
+  }
+
+  @keyframes view-rigth {
+    from {
+      transform: translateX(50%);
+      opacity: 0;
+    }
+
+    to {
+      transform: translateX(0%);
+      opacity: 1;
+    }
+}
+#title-panel{
+    padding: 1em;
+    background-color: #0075FF;
+    text-align: center;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#panel ul{
+    padding: 1em;
+}
+#panel ul li{
+    padding: 0.5em;
+    transition: 500ms all;
+}
+#panel ul li a{
+    text-decoration: none;
+    color: #979797;
+}
+#panel ul li a i{
+    margin-right: 0.5em;
+}
+#panel ul li:hover{
+    margin-left: 2.5em;
+    transform: scale(1.2);
+}
+.btn-close-panel{
+    background-color: transparent;
+    border: none;
+    color: #fff;
+}
+/*-----------------------------------------------------------
+-------------------------------------------------------------
+------------------------ PANEL ------------------------------
+-------------------------------------------------------------
+-------------------------------------------------------------*/

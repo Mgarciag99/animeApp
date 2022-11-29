@@ -1,0 +1,21 @@
+<div class="space"></div>
+
+<app-anime-input
+    (onEnter) = "search( $event )"
+    (onDebounce)="suggestions( $event )"
+
+></app-anime-input>
+<div class="space"> </div>
+<ul class="list-group">
+    <li *ngFor="let anime of animeSuggestions" 
+    class="list-group-item list-group-item-action">
+        
+        <a [routerLink]="['/anime', anime.mal_id]">{{anime.title}}</a>
+    </li>
+</ul>
+
+<div class="content-cards">
+    <app-anime-list [anime]="anime"></app-anime-list>
+</div>
+
+

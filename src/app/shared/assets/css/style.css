@@ -1,0 +1,766 @@
+/*fuentes*/
+
+@font-face {
+    font-family: 'Poppins-Medium';
+    src: url('../fonts/Poppins/Poppins-Medium.ttf');
+}
+@font-face {
+    font-family: 'Poppins-Bold';
+    src: url('../fonts/Poppins/Poppins-Bold.ttf');
+}
+@font-face {
+    font-family: 'Poppins-SemiBold';
+    src: url('../fonts/Poppins/Poppins-SemiBold.ttf');
+}
+
+@font-face {
+    font-family: 'Rubik', sans-serif;
+    src: url('../fonts/Rubik/Rubik-VariableFont_wght.ttf');
+}
+
+*{
+    font-family: 'Poppins-Medium';
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    box-sizing: border-box;
+}
+body{
+    font-size: 16px;
+    background: rgb(235, 235, 235);
+}
+.content{
+    width: 80%;
+    margin: auto;
+}
+/*ESTILOS BARRA DE NAVEGACION*/
+header{
+    background-size: 100% 40em;
+    height: 37em;
+    background: url(../img/volcano.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+header img{
+    position: absolute;
+}
+/* .opacity{
+    background-color: rgba(0,0,0,0.5);
+    width: 100%;
+    height: 37em;
+    position: absolute;
+    top: 0;
+} */
+/*header*/
+#title-header{
+    padding-top: 1em;
+    color: #fff;
+    font-size: 3em;
+}
+#title-header-sec{
+    font-family: 'Poppins-Medium';
+    color: #fff;
+    margin-bottom: 0.5em;
+}
+.search{
+    padding: 1em;
+    border-radius: 1em;
+    border: none;
+    background-color: rgb(255, 255, 255, 10%);
+    border: 2px solid rgb(255, 255, 255);
+    color: #fff;
+}
+nav{
+    padding: 2em 0em;
+    position: fixed;
+    z-index: 100;
+    width: 100%;
+    background-color: transparent;
+    transition: 500ms;
+}
+.sroll-nav{
+    background-color: #000;
+    border-bottom: 5px solid rgb(9, 188, 255);
+}
+.content-nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    margin: auto;
+}
+/*------------------------------------------------------
+--------------------------------------------------------
+-------------ESTILO GENERAL PARA BOTONES----------------
+--------------------------------------------------------
+--------------------------------------------------------
+*/
+.button{
+    text-decoration: none;
+    font-family: 'Poppins-Bold';
+    padding: 1em;
+    background-color: rgb(255, 255, 255, 10%);
+    border: 2px solid rgb(255, 255, 255);
+    color: rgb(255, 255, 255);
+    border-radius: 30px;
+    text-align: center;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    transition: 500ms all;
+}
+.button:hover{
+    transform: scale(1.1,1.1);
+    color:#ccc;
+}
+.icon-button{
+    margin-right: 0.2em;
+}
+.nav-options ul{
+    display: flex;
+}
+
+.nav-options ul li{
+    margin-left: 2.4em;
+    padding-bottom: 0.2em;
+    transition: 500ms all;
+}
+.nav-options ul li .option-nav{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-size: 1.4em;
+}
+#hamburguer a{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.text-hamburguer{
+    color: #fff;
+    text-decoration: none;
+}
+.space{
+    height: 3em;
+    width: 100%;
+}
+
+.navbar-dragable{
+    width: 10em;
+    position: absolute;
+    background-color: rgb(235, 235, 235);
+    display: none;
+    border-radius: 5%;
+    padding-left: 1em;
+}
+.navbar-dragable a:hover{
+  transform: scale(1.1);
+  margin-left: 1em;
+}
+.fa-caret-right{
+    color: rgb(9, 188, 255);
+}
+.navbar-dragable a{
+   display: flex;
+   align-items: center;
+   text-align: center;
+   color: #4c4c4c;
+   margin-top: 0.5em;
+   text-decoration: none;
+   overflow: hidden;
+   transition: all 500ms;
+
+}
+.navbar-dragable a span{
+    margin-left: 1em;
+
+}
+/*-----------------------------------------------------------
+-------------------------------------------------------------
+------------------------ CARROUSEL --------------------------
+-------------------------------------------------------------
+-------------------------------------------------------------*/
+.carrousel{
+    display: grid;
+    grid-template-columns: 75% 25%;
+    height: 28em;
+    background-color: #fff;
+    box-shadow: 3px 1px 16px 0px rgba(0,0,0,0.6);
+    -webkit-box-shadow: 3px 1px 16px 0px rgba(0,0,0,0.6);
+    -moz-box-shadow: 3px 1px 16px 0px rgba(0,0,0,0.6);
+    overflow: hidden;
+
+}
+.carrousel-images{
+    display: flex;
+    width: 400%;
+    margin-left: -100%;
+    position: sticky;
+}
+.carrousel-images .img{
+    width: 100%;
+    height: 28em;
+    transition: 500ms all;
+    position: relative;
+
+}
+.carrousel-images img{
+    width: 100%;
+    height: 28em;
+    transition: 500ms all;
+}
+.title-image{
+    background-color: rgba(0,0,0);
+    color: rgb(255, 255, 255);
+    padding: 1em;
+    font-family: 'Poppins-Bold';
+    font-size: 1.5em;
+    text-decoration: none;
+    border-bottom: 0.3em solid rgb(9, 188, 255);
+    transition: 500ms all;
+    position: absolute;
+    width: 50%;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+    margin: 0.7em 0.7em;
+}   
+.carrousel-arrows{
+    width: 75%;
+    display: flex;
+    justify-content: space-between;
+}
+.carrousel-arrows button i{
+    font-size: 4em;
+    color: #fff;
+    text-shadow: 2px 2px 0p #000;
+}
+.carrousel-arrows button{
+    margin: 1em;
+    border:none;
+    background-color: transparent;
+    transition: 200ms all;
+}
+.carrousel-arrows button:hover{
+    transform: scale(1.2,1.2);
+    color:#ccc;
+}
+.content-carrousel{
+    width: 77%;
+    margin: auto;
+    position: relative;
+    margin-top: -9em;
+}
+.carrousel-arrows{
+    position: absolute;
+    top: 40%;
+}
+.carrousel-arrows h2{
+    padding: 1em 0em;
+    color: #fff;
+    text-shadow: 2px 2px 0p #000;
+}
+
+/*CONTENT CARROUSEL*/
+#content-carrousel{
+    height: 30em;
+    background-color: #fff;
+}
+#content-carrousel h2{
+    text-align: center;
+    font-weight: 700;
+    text-shadow: 1px 1px 1px rgb(214, 214, 214);
+
+}
+#content-carrousel p{
+    margin: 1em 0em;
+    text-align: justify;
+    color: #777777;
+    font-weight: 100;
+}
+.images-content img{
+    width: 5.5em;
+    height: 4em;
+}
+
+.images-content{ 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 2em 0em;
+}
+.carrousel-content{
+    overflow: hidden;
+    z-index: 1;
+
+}
+.more-info{
+    display: block;
+    text-decoration: none;
+    background-color: #000;
+    color: #fff;
+    padding: 1em;
+    margin: auto;
+    transition: 200ms all;
+    border-radius: 15px;
+    text-align: center;
+}
+.item-1 .more-info:hover{
+    transform: scale(1.1,1.1);
+    opacity: 0.9;
+}
+#content-carrousel{
+    display: flex;
+    width: 400%;
+    margin-left: -100%;
+}
+#content-carrousel .item-1 {
+    width: 100%;
+    height: 30em;
+    transition: 500ms all;
+    padding: 1em;
+    overflow: scroll;
+
+}
+
+/*-----------------------------------------------------------
+-------------------------------------------------------------
+------------------------ FIN CARROUSEL --------------------------
+-------------------------------------------------------------
+-------------------------------------------------------------*/
+
+.title-right{
+    display: flex;
+    align-items: center;
+    height: 9.37em;
+}
+.text{
+    flex: 45%;
+}
+.title-right h1{
+    color:rgb(112, 112, 112);
+    margin-right: 0.5em;
+    font-size: 2.2em;
+    font-weight: 500;
+    font-family: 'Rubik', sans-serif;
+}
+
+.barr{  
+    flex: 55%;
+    height: 0.4em;
+    width: 40px;
+    background-color: rgb(112, 112, 112);
+}
+
+
+/*
+---------------------------------
+----------CARDS------------------
+-----------------------------=---*/
+.cards{
+    background-color: rgba(0,0,0);
+    padding: 6em 0em;
+    position: relative;
+}
+
+.content-cards{
+    display: grid;
+    grid-template-columns: 31% 31% 31%;
+    justify-content: space-between;
+}
+.card{
+    position: relative;
+    height: 25em;
+}
+.image-card{
+    width: 100%;
+    height: 100%;
+    display: block;
+    opacity: 0.6;
+}
+.card a{
+    position: absolute;
+    text-align: center;
+    display: block;
+    width: 100%;
+    text-decoration: none;
+    font-family:  'Poppins-Bold';
+    font-size: 1.7em;
+    color: rgb(255, 255, 255);
+    bottom: 0;
+    border-bottom: 0.3em solid rgb(9, 188, 255);
+    padding-bottom: 0.1em;
+}
+
+.cards-arrows{
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.cards-arrows button{
+    height: 4em;
+    font-size: 3em;
+    color: rgb(255, 255, 255);
+    background-color: rgb(0,0,0);
+    border:none;
+    padding: 0.5em;
+}
+
+
+/*--------------------------------------------------------------
+----------------------------------------------------------------
+--------------------- CARDS ROUNDED ----------------------------
+-----------------------------------------------------------------
+-----------------------------------------------------------------*/
+.card-r-i{
+    border-radius: 100%;
+    display: grid;
+    grid-template-columns: 40% 60%;
+    background-color: rgb(255, 255, 255);
+    height: 26.25em;
+    border-radius: 14em;    
+    grid-template-areas: 
+    "item-one item-two"
+    ;
+    
+}
+.card-r-i-secondary{
+    display: grid;
+    grid-template-columns: 60% 40%;
+    grid-template-areas: 
+    "item-two item-one"
+    ;
+    
+}
+.item-image-r-i{
+    grid-area: item-one;
+}
+.item-content-r-i{
+    grid-area: item-two;
+    width: 85%;
+    text-align: center;
+    padding: 1em;
+}
+
+.subtitle{
+    color: #777777;
+}
+.item-image-r-i img{
+    width: 100%;
+    height: 100%;
+    border-radius: 48%;
+}
+
+.title-r-i{
+    font-family:  'Poppins-Bold';
+    padding: 0.2em 0em;
+    text-align: center;
+}
+
+.btn-items{
+    width: 40%;
+    margin-top: 1em;     
+    margin-bottom: 4em;    
+
+}
+.comentary{
+    display: grid;
+    grid-template-columns: 15% 85%;
+    grid-template-areas: 
+    "profile commentary"
+    ;
+}
+
+.profile{
+    grid-area: profile;
+}
+.comentary-profile{
+    grid-area: commentary;
+}
+
+.comentary-profile p{
+    color: #777777;
+    text-align: justify;
+}
+.starts-calification{
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+.starts-calification i{
+    color: yellow;
+    font-size: 2em;
+}
+/*--------------------------------------------------------------
+----------------------------------------------------------------
+--------------------- CARDS ROUNDED ----------------------------
+-----------------------------------------------------------------
+-----------------------------------------------------------------*/
+
+
+.card-simple{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    height: 19em;    
+    grid-template-areas: 
+    "item-image item-content"
+    ;
+}
+
+.card-simple .item-image{
+    display: grid;
+    grid-template-areas: 
+    "item-image"
+    ;
+}
+.card-simple .item-content{
+    text-align: center;
+    padding: 1em;
+    display: grid;
+    grid-template-areas: 
+    "item-content"
+    ;
+}
+
+.card-simple .item-image img{
+    width: 100%;
+    height: 100%;
+}
+
+
+/*--------------------------------------------------------------
+----------------------------------------------------------------
+--------------------- GUIES TOURITIC  ----------------------------
+-----------------------------------------------------------------
+-----------------------------------------------------------------*/
+
+.box-tourist-guia{
+    height: 15em;
+    display: flex;
+}
+.box-first{
+    flex: 55%;
+    background-color: #fff;
+    padding: 1em;
+}
+
+#second{
+    background-color: #000;
+    color: #fff;
+    margin-top: -7em;
+    height: 15em;
+
+}
+.box-first h2{
+    text-align: center;
+}
+
+.date-box-first{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.date-box-first i{
+    font-size: 4em;
+    margin-right: 0.5em;
+}
+.box-secondary{
+    flex: 45%;
+    padding: 1em;
+}
+.box-secondary h2{
+    text-align: center;
+}
+.box-secondary p{
+    text-align: center;
+}
+
+
+/*--------------------------------------------------------------
+----------------------------------------------------------------
+--------------------- FOOOTER  ----------------------------
+-----------------------------------------------------------------
+-----------------------------------------------------------------*/
+
+footer .footer-one{
+    background-color: #777777;
+    text-align: center;
+    padding: 2em 0em
+}
+.footer-one a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.3em;
+}
+footer .footer-form{
+    display: flex;
+    background-color:#000;
+    color: #fff;
+}
+.form{
+    flex: 50%;
+    padding: 1em;
+}
+.footer-form form input[type="text"]{
+    display: block;
+    width: 100%;
+    margin-bottom: 1em;
+    font-size: 1em;
+    padding: 0.5em;
+    box-sizing: border-box;
+}
+form textarea{
+    font-size: 1em;
+    padding: 0.5em;
+    width: 100%;
+    margin-bottom: 1em;
+    font-size: 1em;
+    padding: 0.5em;
+    box-sizing: border-box;
+}
+
+footer{ 
+    background-color: #000;
+}
+
+form button{
+    background-color: #fff;
+    padding: 1em;
+    width: 50%
+}
+.contact{
+    padding: 1em;
+}
+.contact h2{
+    font-size: 2em;
+}
+.footer-development{
+    background-color: #ccc;
+    text-align: center;
+    padding: 2em 0em;
+    color: #4c4c4c;
+    font-size: 1em;
+}
+
+
+
+/*Media Querys for contents*/
+@media only screen and (min-width: 1800px) {
+    .content{
+        width: 65%;
+    }
+    .content-nav{
+        width: 65%;
+    }
+    .content-carrousel{
+        width: 65%;
+    }
+}
+
+@media only screen and (max-width: 1400px) {
+    body{
+        font-size: 14px;
+    }
+}
+
+
+@media only screen and (max-width: 950px) {
+    body{
+        font-size: 10px;
+    }
+}
+
+
+/*------------- PANEL -----------------*/
+#panel{   
+    background: #fff;
+    width: 20%;
+    height: 100%;
+    position: fixed;
+    z-index: 1000;
+    margin-left: 80%;
+    -webkit-box-shadow: -2px 0px 19px 0px rgba(148, 148, 148, 1);
+    -moz-box-shadow: -2px 0px 19px 0px rgba(148, 148, 148, 1);
+     box-shadow: -2px 0px 19px 0px rgba(148, 148, 148, 1);
+    overflow-y: auto;
+    display: none;
+   
+}
+
+@keyframes view-left {
+    from {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+
+    to {
+      transform: translateX(0%);
+      opacity: 1;
+    }
+  }
+
+@keyframes view-rigth {
+    from {
+        transform: translateX(50%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0%);
+        opacity: 1;
+    }
+}
+
+.form-panel{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.form-panel input{
+    padding: 0.6em;
+    width: 70%;
+}
+.form-panel label{
+    margin-top: 1em ;
+}
+.btn-panel{
+    display: block;
+    text-decoration: none;
+    background-color: #000;
+    color: #fff;
+    padding: 1em;
+    margin: auto;
+    transition: 200ms all;
+    text-align: center;
+    margin-top: 1em;
+}
+
+.title-panel{
+    text-align: center;
+    background-color: rgb(9, 188, 255);
+    color: #fff;
+    margin-bottom: 1em;
+    padding: 0.5em;
+    font-size: 1.2em;
+}
+.li-panel{
+    margin-left: 1em;
+}
+.li-panel li{
+    padding: 0.5em 0em;
+    font-size: 1.1em;
+    border-bottom: 1px solid #ededed;
+    transition: 500ms all;
+}
+.li-panel li span{
+    margin-left: 0.5em;
+}
+
+.li-panel li:hover{
+    transform: scale(1.1);
+    margin-left: 2em;
+}

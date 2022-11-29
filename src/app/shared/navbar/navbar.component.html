@@ -1,0 +1,27 @@
+
+<nav>
+  <div class="container-nav">
+      <div class="item-one-nav">
+          <h1>Logotipo</h1>
+      </div>
+      <div class="item-two-nav">
+          <ul class="options">
+              <li><a href="">Mangas <i class="fa fa-solid fa-angle-down"></i></a></li>
+              <li><a href="">Noticias <i class="fa fa-solid fa-angle-down"></i></a></li>
+              <li><a href="">Noticias <i class="fa fa-solid fa-angle-down"></i></a></li>
+          </ul>
+      </div>
+      <div class="item-three-nav">
+          <button [routerLink]="['/Anime/Search']" class="search">
+              <i class="fa fa-search"></i>
+              Buscar
+          </button>
+          <button class="btn-hamburguer" (click)="panel()">
+              Explorar
+              <i class="fa fa-solid fa-bars"></i>
+          </button>
+      </div>
+  </div>
+</nav>
+
+
